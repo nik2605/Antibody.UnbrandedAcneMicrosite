@@ -1,0 +1,357 @@
+<div class="banner">
+  <div class="main">
+    <h2>
+      {{'PERSONALIZEDGUIDE.headline' | translate}}
+    </h2>
+  </div>
+</div>
+<div class="main">
+  <p style="padding-bottom: 15px;">
+    {{'PERSONALIZEDGUIDE.answer_the_statements_below' | translate}}
+  </p>
+  <form (ngSubmit)="exportPDF(f)" #f="ngForm" novalidate>
+    <div class="form">
+      <div class="row topBorder">
+        <div class="col">
+          <h4 [innerHTML]="'PERSONALIZEDGUIDE.this_is_where_I_have_acne' | translate">
+          </h4>
+        </div>
+        <div class="col">
+          <div class="row divCheckBox">
+            <div class="col-12 col-sm-4">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Face' | translate}}
+                <input type="checkbox" name="ck_1_1" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12 col-sm-4">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Back' | translate}}
+                <input type="checkbox" name="ck_1_2" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12 col-sm-4">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Chest' | translate}}
+                <input type="checkbox" name="ck_1_3" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12 col-sm-4">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Shoulders' | translate}}
+                <input type="checkbox" name="ck_1_4" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row topBorder">
+        <div class="col">
+          <h4 [innerHTML]="'PERSONALIZEDGUIDE.this_is_how_acne_makes_me_feel' | translate">
+          </h4>
+        </div>
+        <div class="col">
+          <div class="row divCheckBox">
+            <div class="col-md-6 col-lg-4">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Frustrated' | translate}}
+                <input type="checkbox" name="ck_2_1" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Embarrassed' | translate}}
+                <input type="checkbox" name="ck_2_2" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Upset' | translate}}
+                <input type="checkbox" name="ck_2_3" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Depressed' | translate}}
+                <input type="checkbox" name="ck_2_4" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Anxious' | translate}}
+                <input type="checkbox" name="ck_2_5" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Suicidal' | translate}}
+                <input type="checkbox" name="ck_2_6" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <div class="mobileOther w-100">
+                <div class="other_width">
+                  <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Other' | translate}}
+                    <input type="checkbox" name="ck_2_7" ngModel>
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="w-100">
+                  <input type="text" name="txt_2_1" ngModel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row topBorder">
+        <div class="col">
+          <h4 [innerHTML]="'PERSONALIZEDGUIDE.there_is_a_family_history_of_acne' | translate">
+          </h4>
+        </div>
+        <div class="col">
+          <div class="row divCheckBox">
+            <div class="col-12 col-lg-6">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Acne_on_the_face' | translate}}
+                <input type="checkbox"  name="ck_3_1" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12 col-lg-">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Acne_on_the_body' | translate}}
+                <input type="checkbox" name="ck_3_2" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12 col-lg-">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Acne_scarring' | translate}}
+                <input type="checkbox" name="ck_3_3" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12 col-lg-">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.No_family_history' | translate}}
+                <input type="checkbox" name="ck_3_4" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row topBorder">
+        <div class="col">
+          <h4 [innerHTML]="'PERSONALIZEDGUIDE.this_is_how_acne_has_impacted_my_life_so_far' | translate">
+          </h4>
+        </div>
+        <div class="col">
+          <div class="row divCheckBox">
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.I_avoid_social_activities' | translate}}
+                <input type="checkbox"  name="ck_4_1" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.I_feel_socially_isolated' | translate}}
+                <input type="checkbox" name="ck_4_2" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.I_generally_feel_unattractive_because_of_my_acne' |
+                translate}}
+                <input type="checkbox" name="ck_4_3" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label
+                class="checkbox_container">{{'PERSONALIZEDGUIDE.I_dont_like_being_in_public_without_covering_up_my_acne'
+                |
+                translate}}
+                <input type="checkbox" name="ck_4_4" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label
+                class="checkbox_container">{{'PERSONALIZEDGUIDE.I_avoid_going_to_the_beach_swimming_pool_or_other_places_where_my_acne_might_be_exposed'
+                | translate}}
+                <input type="checkbox" name="ck_4_5" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.I_dont_buy_certain_clothes_because_of_my_acne' |
+                translate}}
+                <input type="checkbox" name="ck_4_6" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label
+                class="checkbox_container">{{'PERSONALIZEDGUIDE.I_dont_like_my_photo_b_ing_taken_because_of_my_acne'
+                | translate}}
+                <input type="checkbox" name="ck_4_7" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label
+                class="checkbox_container">{{'PERSONALIZEDGUIDE.I_am_nervous_to_enter_in_a_relationship_because_of_my_acne'
+                | translate}}
+                <input type="checkbox" name="ck_4_8" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label
+                class="checkbox_container">{{'PERSONALIZEDGUIDE.I_am_nervous_my_partner_doesnt_find_me_attractive_because_of_my_acne'
+                | translate}}
+                <input type="checkbox" name="ck_4_9" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.I_limit_my_diet_because_of_my_acne' | translate}}
+                <input type="checkbox" name="ck_4_10" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <div class="w-100 mobileOther">
+                <div class="other_width" >
+                  <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Other' | translate}}
+                    <input type="checkbox" name="ck_4_11" ngModel>
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="w-100">
+                  <input type="text" name="txt_4_1" ngModel>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row topBorder">
+        <div class="col">
+          <h4
+            [innerHTML]="'PERSONALIZEDGUIDE.this_is_what_I_have_used_in_the_past_to_try_and_treat_my_acne' | translate">
+          </h4>
+        </div>
+        <div class="col">
+          <div class="row divCheckBox">
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Over_the_counter_acne_treatments' | translate}}
+                <input type="checkbox"  name="ck_5_1" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Prescription_acne_treatments' | translate}}
+                <input type="checkbox" name="ck_5_2" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Acne_cleansers' | translate}}
+                <input type="checkbox" name="ck_5_3" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Moisturizers' | translate}}
+                <input type="checkbox" name="ck_5_4" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <div class="mobileOther w-100">
+                <div class="other_width">
+                  <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Other' | translate}}
+                    <input type="checkbox" name="ck_5_5" ngModel>
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="w-100">
+                  <input type="text" name="txt_5_1" ngModel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row topBorder">
+        <div class="col">
+          <h4 [innerHTML]="'PERSONALIZEDGUIDE.this_is_what_I_am_currently_doing_to_try_and_treat_my_acne' | translate">
+          </h4>
+        </div>
+        <div class="col">
+          <div class="row divCheckBox">
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Over_the_counter_acne_treatments' | translate}}
+                <input type="checkbox" name="ck_6_1" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Prescription_acne_treatments' | translate}}
+                <input type="checkbox" name="ck_6_2" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Acne_cleansers' | translate}}
+                <input type="checkbox" name="ck_6_3" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Moisturizers' | translate}}
+                <input type="checkbox" name="ck_6_4" ngModel>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-12">
+              <div class="mobileOther w-100">
+                <div class="other_width">
+                  <label class="checkbox_container">{{'PERSONALIZEDGUIDE.Other' | translate}}
+                    <input type="checkbox" name="ck_6_5" ngModel>
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="w-100">
+                  <input type="text" name="txt_6_1" ngModel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="topBorder">
+      <p>
+        {{'PERSONALIZEDGUIDE.use_these_questions_to_guide' | translate}}
+      </p>
+    </div>
+    <div>
+      <ol class="personalized_question" [innerHTML]="'PERSONALIZEDGUIDE.question' | translate">
+      </ol>
+    </div>
+    <div class="topBorder">
+      <p class="text-center text_medium_weight">
+        {{'PERSONALIZEDGUIDE.click_to_save_the_personalized' | translate}}
+      </p>
+    </div>
+    <div class="red_button text-center">
+      <a>
+        <button class="button border-0    " >
+            {{'save' | translate | uppercase}}
+        </button>
+      </a>
+      <!-- </a> -->
+    </div>
+  </form>
+</div>

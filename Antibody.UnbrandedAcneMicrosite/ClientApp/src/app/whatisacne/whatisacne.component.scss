@@ -1,0 +1,93 @@
+@import "../../styles/style.scss";
+
+.main {
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  p{
+    padding-bottom: 20px;
+  }
+  .micetype {
+    font-size: $micetype_font_size;
+  }
+}
+.container {
+  width: 320px;
+  padding-top: 15px;
+  img {
+    width: 200px;
+    height: 200px;
+    border: $blue_border_size solid $blue_border_color;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  h3 {
+    font-size: 36px;
+    color: $font_blue;
+  }
+  h4 {
+    padding-bottom: 5px;
+    border-bottom: $blue_border_size solid $blue_border_color;
+  }
+}
+
+figure {
+  width: 295px;
+  margin: 0px auto;
+  img {
+    border: $blue_border_size solid $blue_border_color;
+    border-radius: 40px;
+    width: 290px;
+    height: auto;
+  }
+  figcaption {
+    font-size: $micetype_font_size;
+    padding-top: 5px;
+  }
+}
+
+.action_row {
+  .action_image {
+    width: 175px;
+    height: 175px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    display: block;
+    .transparent_blue {
+      background-color: $site_transparent_blue;
+      border-radius: 50%;
+      width: 175px;
+      height: 175px;
+    }
+  }
+  p {
+    padding-top: 20px;
+  }
+}
+
+.divCheckBox{
+  .col-6{
+    border-bottom: 1px solid #979797;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.flip_card_inner {
+  .flip_card_font {
+    h1 {
+      padding: 0px 20px;
+    }
+  }
+  .flip_card_back {
+    h1 {
+      padding: 0px 20px;
+    }
+  }
+}
+
+

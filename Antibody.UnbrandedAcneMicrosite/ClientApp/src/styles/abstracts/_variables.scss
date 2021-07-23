@@ -1,0 +1,51 @@
+//site color
+$site_red: #F42F56;
+$site_blue: #1ECBE1;
+$site_transparent_blue:rgba(30,203,225,0.66);
+
+
+//font size
+$h1_font_size:32px;
+$h2_font_size:24px;
+$h3_font_size:20px;
+$h4_font_size:18px;
+$p_font_size:14px;
+$policy_p_font_size:12px;
+$micetype_font_size:10px;
+$red_button_font_size:18px;
+$blue_button_font_size:24px;
+
+//language button color
+$language_button_color:#58595B;
+
+//font color
+$font_grey:#58595B;
+$font_red:#F42F56;
+$font_white:#FFFFFF;
+$font_pink:#EC008C;
+$font_blue:#1ECBE1;
+
+//border variable
+$blue_border_color:#1ECBE1;
+$blue_border_size:4px;
+$nav_border_color:#58595B;
+
+
+//font family
+$roboto-condensed: "Roboto", Arial, sans-serif;
+
+//screen size
+// small phone size
+$screen-xs-min: 320px;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;

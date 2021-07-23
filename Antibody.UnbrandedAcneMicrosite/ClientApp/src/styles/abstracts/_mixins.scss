@@ -1,0 +1,83 @@
+// Extra Small Device
+@mixin xs{
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+}
+}
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (min-width: $screen+'px') {
+      @content;
+  }
+}
+
+// @include xs {
+// }
+// @include sm{
+// }
+// @include md {
+// }
+// @include lg {
+// }
+// @include xl {
+// }
+// @include rwd(1920) {
+// }
+
+//polygon image
+
+//button style
+@mixin createButton($background_color,$text_color,$text_size) {
+  background: $background_color;
+  text-align: center;
+  border-radius: 20px 20px;
+  color: $text_color;
+  font-size: $text_size;
+  padding: 10px 40px;
+  border-radius: 50px;
+  // &:hover{
+  //   background-color:#ffffff;
+  //   border: 2px solid $background_color;
+  //   color: $background_color;
+  // }
+}
+
+//add hr color
+@mixin AddHr($hr_color) {
+  color:$hr_color;
+  background-color: $hr_color;
+}
+
+
+
+
+

@@ -1,0 +1,30 @@
+@import "../../styles/style.scss";
+
+.topBorder {
+  border-top: 1px solid #979797;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+input[type=text]{
+  border: 1px solid #979797;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  width: 90%;
+}
+
+@include xs {
+  .mobileOther{
+    display: block;
+  }
+}
+@include sm {
+  .mobileOther{
+    display: flex;
+  }
+}
+
+.other_width{
+  width: 106px;
+}
+

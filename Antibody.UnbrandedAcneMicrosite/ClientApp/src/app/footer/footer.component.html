@@ -1,0 +1,21 @@
+<footer>
+  <div class="red_strip">
+
+  </div>
+  <div class="blue_strip">
+    <div class="main">
+      <div class="row">
+        <div class="col d-flex justify-content-start" [innerHTML]="'FOOTER.copyright'|translate">
+        </div>
+        <div class="col text-center">
+          {{'FOOTER.product_code' | translate}}
+        </div>
+        <div class="col d-flex justify-content-end">
+          <a class="navText" href="{{currentLanguage}}/privacypolicy">{{'FOOTER.privacy_policy' | translate}}</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

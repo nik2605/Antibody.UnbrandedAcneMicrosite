@@ -1,0 +1,120 @@
+.blue_rounded_card {
+  border-radius: 20px;
+  @include xs {
+  }
+  @include sm {
+  }
+  @include xl {
+  }
+  @include rwd(1920) {
+  }
+  .title {
+    border: $blue_border_size solid $blue_border_color;
+    background-color: $site_blue;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    h3 {
+      color: $font_white;
+      margin: 0;
+    }
+    @include xs {
+    }
+    @include sm {
+    }
+    @include md {
+    }
+    @include lg {
+    }
+    @include xl {
+    }
+    @include rwd(1920) {
+    }
+  }
+  .text {
+    background-color: #ffffff;
+    border: $blue_border_size solid $blue_border_color;
+    border-radius: 0px 0px 20px 20px;
+    padding: 10px 15px;
+    .text_red {
+      color: $font_red;
+      font-size: $h2_font_size;
+      font-weight: 500;
+    }
+    .quarter_sign{
+      font-size: 32px !important;
+    }
+    @include xs {
+    }
+    @include sm {
+    }
+    @include md {
+    }
+  }
+}
+
+.flip_card {
+  margin-bottom: 20px;
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  perspective: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  .flip_card_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    .flip_card_font {
+      background-color: $site_transparent_blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      h1 {
+        text-align: center;
+        color: $font_white;
+      }
+    }
+    .flip_card_back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform: rotateY(180deg);
+      background-color: $site_red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 20px;
+      h1 {
+        text-align: center;
+        color: $font_white;
+      }
+      p {
+        color: $font_white;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.flipSingleCard {
+  transform: rotateY(180deg);
+}

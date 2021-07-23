@@ -1,0 +1,119 @@
+html,
+body {
+  height: 100%;
+}
+body {
+
+  margin: 0 auto !important;
+  font-family: Roboto, "Helvetica Neue", sans-serif !important;
+  color:#58595B !important;
+  //font-family: Helvetica, arial, sans-serif;
+  //font-family: 'Roboto Condensed',Arial,sans-serif !important;
+}
+
+.mat-body, .mat-body-1, .mat-typography{
+  font: inherit;
+}
+
+
+img{
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.main {
+  width: 80%;
+  margin: auto;
+  max-width: $screen-xl-min;
+  .text_red{
+    color: $font_red;
+  }
+  .text_grey{
+    color: $font_grey;
+  }
+  @include xs {
+    width: 90%;
+  }
+  @include lg {
+    width: 85%;
+  }
+  @include rwd(1920){
+    width: 80%;
+  }
+}
+
+// section{
+//   scroll-margin-top: 5rem;
+// }
+
+//font size
+h1{
+   font-size: $h1_font_size;
+   font-weight: bold;
+}
+h2{
+  font-size: $h2_font_size;
+  font-weight: bold;
+}
+h3{
+  font-size: $h3_font_size;
+  font-weight: bold;
+}
+h4{
+  font-size: $h4_font_size;
+  font-weight: 500;
+}
+p{
+  font-size: $p_font_size;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ul{
+  padding-inline-start: 15px;
+  li{
+    font-size: $policy_p_font_size;
+    line-height: 1.5;
+  }
+}
+ol{
+  padding-inline-start: 12px;
+
+  li{
+    font-size: $micetype_font_size;
+    font-weight: 300;
+    &::marker {
+      font-weight: 500;
+    }
+  }
+}
+.text_medium_weight{
+  font-weight: 500;
+}
+
+
+/* a tag style */
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.personal_guide_link{
+  color: $font_red !important;
+  font-weight: 600;
+}
+
+
+.personalized_question {
+  padding-inline-start: 20px;
+  li {
+    font-size: $p_font_size;
+    &::marker {
+      color: $site_blue;
+    }
+  }
+}

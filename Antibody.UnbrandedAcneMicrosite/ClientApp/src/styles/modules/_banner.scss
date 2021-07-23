@@ -1,0 +1,16 @@
+.banner {
+  padding: 20px 0px;
+  margin-bottom: 30px;
+  background-color: $site_red;
+  color: $font-white;
+  line-height: 1.5;
+  h2{
+    font-size: 30px;
+  }
+  @include xs {
+  }
+  @include sm {
+  }
+  @include md {
+  }
+}

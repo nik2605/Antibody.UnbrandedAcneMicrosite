@@ -1,0 +1,61 @@
+<header>
+  <div id="mobileNav" [hidden]="!isMobileMenu">
+    <ul class="navbar-nav">
+      <li class="text-right">
+        <svg (click)="ShowMoilbeMenu()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-x xicon" viewBox="0 0 16 16" style="color: #ffffff;">
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+        </svg>
+      </li>
+      <li>
+        <a class="navText navBorder" [routerLink]="currentLanguage +'/home'"
+          fragment="whatisacne">{{'HEADER.what_is_acne'| translate}}</a>
+      </li>
+      <li>
+        <a class="navText navBorder" [routerLink]="currentLanguage +'/home'"
+          fragment="acnemisconceptions">{{'HEADER.acne_misconceptions'|
+          translate}}</a>
+      </li>
+      <li>
+        <a class="navText" [routerLink]="currentLanguage +'/home'" fragment="whatcanido">{{'HEADER.what_can_i_do'|
+          translate}}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="row">
+      <div class="col-6 col-md-3">
+        <a [routerLink]="currentLanguage +'/home'">
+          <img *ngIf="currentLanguage == 'en'" id="siteLogo" src="../../assets/images/Aklief Unbranded Acne - Logo.png" alt="Site logo">
+          <img *ngIf="currentLanguage == 'fr'" id="siteLogo" src="../../assets/images/Aklief Unbranded Acne - Logo_fr.png" alt="Site logo">
+        </a>
+      </div>
+      <div class="col-4 col-md-8 d-flex justify-content-end align-items-center">
+        <div class="togglerIcon">
+          <button class="navbar-toggler" type="button" (click)="ShowMoilbeMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd" fill="#ffffff"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+          </button>
+        </div>
+        <div id="desktopNav">
+          <a class="navText navBorder" [routerLink]="currentLanguage +'/home'"
+            fragment="whatisacne">{{'HEADER.what_is_acne'| translate}}</a>
+          <a class="navText navBorder" [routerLink]="currentLanguage +'/home'"
+            fragment="acnemisconceptions">{{'HEADER.acne_misconceptions'|
+            translate}}</a>
+          <a class="navText" [routerLink]="currentLanguage +'/home'" fragment="whatcanido">{{'HEADER.what_can_i_do'|
+            translate}}</a>
+        </div>
+      </div>
+      <div class="col-2 col-md-1 d-flex justify-content-center align-items-center">
+        <div id="language_icon" (click)="switchLanguage(language_icon_text)">
+          {{ language_icon_text | uppercase}}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

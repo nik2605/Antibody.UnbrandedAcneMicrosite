@@ -1,0 +1,21 @@
+@import "../../styles/style.scss";
+
+footer{
+  .blue_strip{
+    background-color: $site_blue;
+    padding: 20px 0px;
+    font-size: 10px;
+      font-weight: 300;
+    .navText{
+      text-decoration: none;
+      color: $font_grey;
+      padding: 5px 20px;
+    }
+    .navBorder{
+      border-right: 1px solid $nav_border_color;
+    }
+
+  }
+
+}
+

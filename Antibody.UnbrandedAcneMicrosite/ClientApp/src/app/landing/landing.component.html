@@ -1,0 +1,29 @@
+<div class="landing_page d-flex align-items-start flex-column">
+  <div class="main">
+    <h4 class="text-center" [innerHTML]="'HOME.eyebrown' | translate">
+    </h4>
+    <h1 class="text-center" [innerHTML]="'HOME.headline' | translate">
+    </h1>
+  </div>
+
+  <div class="w-100 mt-auto">
+    <div class="callout_strip text-center">
+      <p>
+        {{'HOME.create_an_acne_specific' | translate}}
+      </p>
+      <div class="red_button">
+        <a href="{{currentLanguage}}/personalizedguide">
+          <div class="button">
+            {{'download' | translate | uppercase }}
+          </div>
+        </a>
+      </div>
+      <p>
+        {{'HOME.download_your_personalized_guide' | translate}}
+      </p>
+    </div>
+  </div>
+</div>
+<div class="blue_strip" style="height: 10px;">
+  &nbsp;
+</div>

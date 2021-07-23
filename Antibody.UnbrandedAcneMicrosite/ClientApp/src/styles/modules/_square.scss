@@ -1,0 +1,38 @@
+.square {
+  text-align: center;
+  padding: 20px;
+  .title {
+    color: #ffffff;
+    font-weight: 600;
+    @include xs {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    @include xl {
+      font-size: 50px;
+      line-height: 58px;
+    }
+  }
+  .text {
+    color: #000000;
+    @include xs {
+      padding:2% 10%;
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @include sm {
+    }
+    @include md {
+    }
+    @include lg {
+      padding:2% 10%;
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @include xl {
+      padding: 2% 13%;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}

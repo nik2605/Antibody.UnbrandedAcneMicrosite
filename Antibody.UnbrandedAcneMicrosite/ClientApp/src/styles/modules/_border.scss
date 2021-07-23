@@ -1,0 +1,13 @@
+@include xs {
+  .blue_border{
+    border:$blue_border_size solid $blue_border_color;
+  }
+}
+
+@include md {
+
+}
+
+@include lg {
+
+}

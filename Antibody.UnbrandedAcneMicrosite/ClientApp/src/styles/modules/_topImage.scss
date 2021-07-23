@@ -1,0 +1,14 @@
+.topImage{
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  @include xs {
+    height: 500px;
+  }
+  @include lg {
+    height: 85vh;
+  }
+}

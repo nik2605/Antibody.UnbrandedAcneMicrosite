@@ -1,0 +1,98 @@
+@import "../../styles/style.scss";
+
+header {
+  background-color: $site_blue;
+  padding: 20px 0px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index: 1;
+  height: 90px;
+  #siteLogo {
+    max-width: 270px;
+    width: 100%;
+    height: auto;
+  }
+  .navText {
+    text-decoration: none;
+    font-size: $p_font_size;
+    color: $font_grey;
+    padding: 5px 20px;
+  }
+  .navBorder {
+    border-right: 1px solid $nav_border_color;
+  }
+  #language_icon {
+    background-color: $language_button_color;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    color: $font_white;
+    font-size: $p_font_size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  #desktopNav {
+    flex-basis: auto;
+    flex-grow: 1;
+    align-items: center;
+    @include xs {
+      display: none;
+    }
+    @include lg {
+      display: contents;
+    }
+  }
+
+  #mobileNav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    z-index: 1;
+    padding: 5%;
+    top: 0;
+    .xicon {
+      width: 50px;
+      height: 50px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    li {
+      border-bottom: 1px solid rgba(76, 76, 76, 0.5);
+      .navText {
+        color: #ffffff;
+        font-size: 23px;
+        padding: 20px 0px;
+        width: 100%;
+        display: block;
+        &:hover {
+          //color: steelblue;
+        }
+      }
+    }
+
+    @include xs {
+      display: block;
+    }
+    @include lg {
+      display: none;
+    }
+  }
+  @include xs {
+    .togglerIcon {
+      display: block;
+    }
+  }
+  @include lg {
+    .togglerIcon {
+      display: none;
+    }
+  }
+}

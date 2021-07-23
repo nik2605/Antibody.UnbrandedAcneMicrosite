@@ -1,0 +1,36 @@
+@import "../../styles/style.scss";
+
+.main {
+  p {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0px;
+  }
+}
+
+.flip_card{
+  .flip_card_inner {
+    .flip_card_font {
+      h1 {
+        font-size: 27px;
+        padding: 0px 10px;
+      }
+    }
+    .flip_card_back {
+      display: block !important;
+      padding: 0 15px !important;
+      h1 {
+        font-size: 27px;
+        padding: 30px 10px 10px;
+        margin-bottom: 0px;
+      }
+      p{
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        font-size: 15px !important;
+      }
+
+    }
+  }
+}
+

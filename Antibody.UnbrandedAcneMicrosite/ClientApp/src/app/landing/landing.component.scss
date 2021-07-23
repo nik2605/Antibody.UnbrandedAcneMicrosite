@@ -1,0 +1,64 @@
+@import "../../styles/style.scss";
+
+.landing_page {
+  background-image: url("../../assets/images/landing_background_image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+}
+
+.main {
+  margin-top: 0px;
+  h4 {
+    font-weight: 300;
+    @include xs {
+      font-size:14px;
+      padding: 10px 20px 30px;
+    }
+    @include sm {
+      font-size: 18px;
+      padding: 15px 50px 30px;
+    }
+    @include xl {
+      padding-top:50px 50px 30px;
+    }
+  }
+  h1 {
+    @include xs {
+      font-size: 31px;
+      padding: 0px 10px;
+    }
+    @include sm {
+      font-size: 40px;
+      padding: 0px 20px;
+    }
+  }
+  @include xs {
+  }
+  @include sm {
+  }
+  @include md {
+  }
+  @include lg {
+  }
+  @include xl {
+  }
+  @include rwd(1920) {
+  }
+}
+
+.fpo {
+  color: $font_pink;
+  font-size: 54px;
+}
+
+.callout_strip {
+  background-color: $site_transparent_blue;
+  padding: 20px 0px;
+  p {
+    color: $font_white;
+    font-weight: 500;
+    padding: 0px 10px;
+  }
+}

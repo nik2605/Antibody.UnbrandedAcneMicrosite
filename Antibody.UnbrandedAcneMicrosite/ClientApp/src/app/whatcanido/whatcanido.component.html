@@ -1,0 +1,38 @@
+
+<div class="banner">
+  <div class="main">
+    <h2>
+      {{'WHATCANIDO.headline' | translate}}
+    </h2>
+  </div>
+</div>
+
+<div class="main" style="padding-bottom:40px;">
+  <div>
+    <p [innerHTML]="'WHATCANIDO.a_doctor_can_help_you' | translate">
+
+    </p>
+    <h2 style="padding: 30px 0px 15px;">
+      {{'WHATCANIDO.subhead' | translate}}
+    </h2>
+    <p [innerHTML]="'WHATCANIDO.use_this_personalized' | translate">
+    </p>
+    <div class="red_button">
+      <a href="{{currentLanguage}}/personalizedguide">
+        <div class="button">
+          {{'download' | translate | uppercase}}
+        </div>
+      </a>
+    </div>
+    <div>
+      <h4 style="font-weight: bold;">
+        {{'reference' | translate | uppercase}}
+      </h4>
+      <ol [innerHTML]="'WHATCANIDO.reference_list' | translate">
+
+      </ol>
+    </div>
+  </div>
+  <div style="min-height: 152px;">
+
+  </div>

@@ -1,0 +1,16 @@
+<!-- <div>
+  <div>{{ 'HOME.HELLO' | translate }}</div>
+</div>
+
+<select #langSelect (change)="translate.use(langSelect.value)">
+  <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+</select> -->
+
+
+<app-header></app-header>
+
+<div style="margin-top: 90px">
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>

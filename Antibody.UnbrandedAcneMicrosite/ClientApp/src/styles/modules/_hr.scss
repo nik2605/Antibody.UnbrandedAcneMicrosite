@@ -1,0 +1,8 @@
+.showHr{
+  @include xs{
+    display: block;
+  }
+  @include sm{
+    display: none;
+  }
+}

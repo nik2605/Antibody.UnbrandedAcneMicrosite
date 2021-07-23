@@ -1,0 +1,122 @@
+.canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    width: 220px;
+    height: auto;
+  }
+  // .happyface {
+  //   position: relative;
+  //   border: 10px solid $site_blue;
+  //   border-radius: 50%;
+  //   width: 260px;
+  //   height: 260px;
+  //   .eyes {
+  //     .eye {
+  //       position: absolute;
+  //       top: 80px;
+  //       height: 150px;
+  //       width: 80px;
+  //       border-radius: 50%;
+  //       border: 10px solid transparent;
+  //       box-sizing: border-box;
+  //       border-top-color: $site_blue;
+  //     }
+  //     .lefteye {
+  //       left: 35px;
+  //     }
+  //     .righteye {
+  //       right: 35px;
+  //     }
+  //   }
+  //   .mouth {
+  //     position: absolute;
+  //     top: -23px;
+  //     left: 35px;
+  //     height: 200px;
+  //     width: 170px;
+  //     border-radius: 0 0 50% 50%;
+  //     border: 10px solid transparent;
+  //     box-sizing: border-box;
+  //     border-bottom-color: $site_blue;
+  //   }
+  // }
+  // .sadface {
+  //   position: relative;
+  //   border: 10px solid $site_blue;
+  //   border-radius: 50%;
+  //   width: 260px;
+  //   height: 260px;
+  //   .eyes {
+  //     .eye {
+  //       position: absolute;
+  //       top: -45px;
+  //       height: 150px;
+  //       width: 80px;
+  //       border-radius: 50%;
+  //       border: 10px solid transparent;
+  //       box-sizing: border-box;
+  //       border-bottom-color: $site_blue;
+  //     }
+  //     .lefteye {
+  //       left: 35px;
+  //     }
+  //     .righteye {
+  //       right: 35px;
+  //     }
+  //   }
+  //   .mouth {
+  //     position: absolute;
+  //     top: 144px;
+  //     left: 35px;
+  //     height: 200px;
+  //     width: 170px;
+  //     border-radius: 50% 50% 0 0;
+  //     border: 10px solid transparent;
+  //     box-sizing: border-box;
+  //     border-top-color: $site_blue;
+  //   }
+  // }
+}
+// .animation{
+//   animation-name: example;
+//   animation: 4s;
+// }
+
+// @keyframes example {
+//   from {border-radius: 0 0 50% 50%;border-bottom-color: blue;border-top-color:transparent}
+//   to {border-radius: 50% 50% 0 0;border-bottom-color: transparent;border-top-color:blue}
+// }
+
+// .face{
+//   stroke: $site_blue;
+//   stroke-width: 6px;
+//   stroke-linecap: round;
+//   fill: none;
+// }
+
+// .eye{
+//   fill: none;
+//   stroke: $site_blue;
+//   stroke-width: 10px;
+//   stroke-linecap: round;
+//   transition: all .5s linear;
+// }
+// .lefteye{
+//   transform-origin:80px 94px ;
+// }
+// .righteye{
+//   transform-origin:180px 94px;
+// }
+
+// .mouth {
+//   fill: none;
+//   stroke: $site_blue;
+//   stroke-width: 10px;
+//   stroke-linecap: round;
+// }
+
+// .rotateEye{
+//   transform: rotate(180deg);
+// }

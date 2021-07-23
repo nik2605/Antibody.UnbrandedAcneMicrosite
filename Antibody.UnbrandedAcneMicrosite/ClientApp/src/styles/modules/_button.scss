@@ -1,0 +1,46 @@
+.buttonBox {
+  margin: 20px auto;
+  a {
+    text-decoration: none;
+    .button {
+      margin: 0px auto;
+      font-weight: 500;
+      &:hover {
+        filter: brightness(1.2);
+        cursor: pointer;
+      }
+      @include xs {
+        width: fit-content;
+        min-width: 200px;
+      }
+    }
+  }
+}
+
+.red_button {
+  @extend .buttonBox;
+  .button {
+    @include createButton($site_red, $font-white, $red_button_font_size);
+  }
+}
+
+.blue_button {
+  @extend .buttonBox;
+  .button {
+    @include createButton($site_blue, $font-white, $blue_button_font_size);
+  }
+}
+
+// .darkblue_button{
+//   @extend .buttonBox;
+//   .button{
+//     @include createButton($btn_darkblue,$font-white);
+//   }
+// }
+
+// .white_button{
+//   @extend .buttonBox;
+//   .button{
+//     @include createButton($btn_white,$font-black);
+//   }
+// }
