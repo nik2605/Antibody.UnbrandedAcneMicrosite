@@ -1,6 +1,6 @@
 <div class="banner">
   <div class="main">
-    <h2>
+    <h2 style="margin-bottom: 0;">
       {{'ACNEMISCONCEPTION.headline' | translate}}
     </h2>
   </div>
@@ -191,7 +191,7 @@
     </div>
   </div>
   <div class="blue_button">
-    <a href="{{currentLanguage}}/whatcanido">
+    <a [routerLink]="'.'" fragment="whatcanido">
       <div class="button">
         {{'ACNEMISCONCEPTION.so_how_did_you_do' | translate | uppercase}}
       </div>

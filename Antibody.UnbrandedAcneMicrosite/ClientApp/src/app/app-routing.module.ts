@@ -21,9 +21,11 @@ export function HttpLoaderFactory(translate: TranslateService, location: Locatio
 }
 
 const routerOptions: ExtraOptions = {
+  onSameUrlNavigation:"reload",
+  enableTracing:true,
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
-  scrollOffset: [0, 90],
+  //scrollOffset: [0, 90],
 };
 
 
@@ -41,7 +43,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes,routerOptions),
+    RouterModule.forRoot(routes),
     //RouterModule.forRoot(routes),
     LocalizeRouterModule.forRoot(routes, {
       parser: {
@@ -51,6 +53,6 @@ const routes: Routes = [
       }
     })
   ],
-  exports: [ RouterModule, LocalizeRouterModule ]
+  exports: [RouterModule, LocalizeRouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
