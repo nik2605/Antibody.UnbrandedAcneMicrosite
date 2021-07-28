@@ -1,7 +1,7 @@
 <header>
   <div id="mobileNav" [hidden]="!isMobileMenu">
     <ul class="navbar-nav">
-      <li class="text-right">
+      <li class="text-right" style="padding-bottom: 40px;">
         <svg (click)="ShowMoilbeMenu()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
           class="bi bi-x xicon" viewBox="0 0 16 16" style="color: #ffffff;">
           <path
@@ -9,11 +9,11 @@
         </svg>
       </li>
       <li>
-        <a class="navText navBorder" [routerLink]="currentLanguage +'/home'"
-          fragment="whatisacne">{{'HEADER.what_is_acne'| translate}}</a>
+        <a class="navText" [routerLink]="currentLanguage +'/home'" fragment="whatisacne">{{'HEADER.what_is_acne'|
+          translate}}</a>
       </li>
       <li>
-        <a class="navText navBorder" [routerLink]="currentLanguage +'/home'"
+        <a class="navText" [routerLink]="currentLanguage +'/home'"
           fragment="acnemisconceptions">{{'HEADER.acne_misconceptions'|
           translate}}</a>
       </li>
@@ -24,14 +24,16 @@
     </ul>
   </div>
   <div class="main">
-    <div class="row">
-      <div class="col-6 col-md-3">
+    <div class="row align-items-center" style="height: 54px;">
+      <div class="col-7 col-lg-3">
         <a [routerLink]="currentLanguage +'/home'" fragment="landing">
-          <img *ngIf="currentLanguage == 'en'" id="siteLogo" src="../../assets/images/Aklief Unbranded Acne - Logo.png" alt="Site logo">
-          <img *ngIf="currentLanguage == 'fr'" id="siteLogo" src="../../assets/images/Aklief Unbranded Acne - Logo_fr.png" alt="Site logo">
+          <img *ngIf="currentLanguage == 'en'" id="siteEnLogo"
+            src="../../assets/images/Aklief Unbranded Acne - Logo.png" alt="Site logo">
+          <img *ngIf="currentLanguage == 'fr'" id="siteFrLogo"
+            src="../../assets/images/Aklief Unbranded Acne - Logo_fr.png" alt="Site logo">
         </a>
       </div>
-      <div class="col-4 col-md-8 d-flex justify-content-end align-items-center">
+      <div class="col-3 col-lg-8 d-flex justify-content-end align-items-center">
         <div class="togglerIcon">
           <button class="navbar-toggler" type="button" (click)="ShowMoilbeMenu()">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
@@ -51,7 +53,7 @@
             translate}}</a>
         </div>
       </div>
-      <div class="col-2 col-md-1 d-flex justify-content-center align-items-center">
+      <div class="col-2 col-lg-1 d-flex justify-content-center align-items-center">
         <div id="language_icon" (click)="switchLanguage(language_icon_text)">
           {{ language_icon_text | uppercase}}
         </div>

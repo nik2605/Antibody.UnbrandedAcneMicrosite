@@ -5,6 +5,8 @@ import { formViewModel } from '../models/formViewModel';
 import { ExportPDFService } from '../services/export-pdf.service';
 import { environment } from 'src/environments/environment';
 import { TranslateService } from '@ngx-translate/core';
+import { FileSaverService } from 'ngx-filesaver';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-personalizedguide',
@@ -15,8 +17,9 @@ export class PersonalizedguideComponent implements OnInit {
 
   formviewmodel: formViewModel
   containerUrl: string = environment.download_path;
+  pdfName: string = '';
 
-  constructor(private exportPDFService: ExportPDFService, private router: Router,private translate:TranslateService) {
+  constructor(private exportPDFService: ExportPDFService, private router: Router, private translate: TranslateService, private _httpClient: HttpClient, private _FileSaverService: FileSaverService,) {
     //this.formName = 'Name';
   }
 
@@ -74,15 +77,26 @@ export class PersonalizedguideComponent implements OnInit {
 
       if (result["message"] === '200 OK') {
 
-        var pdfUrl = this.containerUrl + result["filename"];
+        this.pdfName = result["filename"];
+        if (this.pdfName.length > 0) {
 
-        window.location.replace(pdfUrl);
+          var pdfUrl = this.containerUrl + this.pdfName;
+
+          this._httpClient.get(pdfUrl, {
+            observe: 'response',
+            responseType: 'blob'
+          }).subscribe(res => {
+            this._FileSaverService.save(res.body, this.pdfName);
+          });
+          return;
+        }
+
+        //window.location.replace(pdfUrl);
+
       }
-      else{
+      else {
         console.log(result);
       }
     })
   }
-
-
 }
