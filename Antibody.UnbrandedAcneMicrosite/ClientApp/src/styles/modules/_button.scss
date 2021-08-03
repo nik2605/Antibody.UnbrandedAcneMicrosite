@@ -1,18 +1,17 @@
 .buttonBox {
   margin: 20px auto;
-  a {
+  .button {
+    margin: 0px auto;
+    font-weight: 500;
     text-decoration: none;
-    .button {
-      margin: 0px auto;
-      font-weight: 500;
-      &:hover {
-        filter: brightness(1.2);
-        cursor: pointer;
-      }
-      @include xs {
-        width: fit-content;
-        min-width: 200px;
-      }
+    display: block;
+    &:hover {
+      filter: brightness(1.2);
+      cursor: pointer;
+    }
+    @include xs {
+      width: fit-content;
+      min-width: 200px;
     }
   }
 }

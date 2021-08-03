@@ -14,3 +14,10 @@
   @include md {
   }
 }
+
+
+.blue_banner{
+  @extend .banner;
+  background-color: $site_blue;
+  text-align: center;
+}

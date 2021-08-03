@@ -9,16 +9,16 @@
         </svg>
       </li>
       <li>
-        <a class="navText" [routerLink]="currentLanguage +'/home'" fragment="whatisacne">{{'HEADER.what_is_acne'|
+        <a class="navText" [routerLink]="currentLanguage +'/home'" fragment="whatisacne" (click)="ShowMoilbeMenu()">{{'HEADER.what_is_acne'|
           translate}}</a>
       </li>
       <li>
         <a class="navText" [routerLink]="currentLanguage +'/home'"
-          fragment="acnemisconceptions">{{'HEADER.acne_misconceptions'|
+          fragment="acnemisconceptions" (click)="ShowMoilbeMenu()">{{'HEADER.acne_misconceptions'|
           translate}}</a>
       </li>
       <li>
-        <a class="navText" [routerLink]="currentLanguage +'/home'" fragment="whatcanido">{{'HEADER.what_can_i_do'|
+        <a class="navText" [routerLink]="currentLanguage +'/home'" fragment="whatcanido" (click)="ShowMoilbeMenu()">{{'HEADER.what_can_i_do'|
           translate}}</a>
       </li>
     </ul>

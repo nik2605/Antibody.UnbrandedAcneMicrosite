@@ -13,7 +13,7 @@
   h4 {
     font-weight: 300;
     @include xs {
-      font-size:14px;
+      font-size: 14px;
       padding: 10px 20px 30px;
     }
     @include sm {
@@ -21,7 +21,7 @@
       padding: 15px 50px 30px;
     }
     @include xl {
-      padding-top:50px 50px 30px;
+      padding-top: 50px 50px 30px;
     }
   }
   h1 {
@@ -30,8 +30,24 @@
       padding: 0px 10px;
     }
     @include sm {
-      font-size: 40px;
+      font-size: 28px;
+      padding: 0px 15px;
+    }
+    @include md {
+      font-size: 35px;
       padding: 0px 20px;
+    }
+    @include lg {
+      font-size: 40px;
+    }
+  }
+  .eyebrown {
+    font-weight: bold;
+    @include xs {
+      padding-top: 15px;
+    }
+    @include sm {
+      padding-top: 35px;
     }
   }
   @include xs {
@@ -48,10 +64,6 @@
   }
 }
 
-.fpo {
-  color: $font_pink;
-  font-size: 54px;
-}
 
 .callout_strip {
   background-color: $site_transparent_blue;

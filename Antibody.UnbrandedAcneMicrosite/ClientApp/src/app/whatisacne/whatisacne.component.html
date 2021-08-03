@@ -271,9 +271,9 @@
     </div>
     <div class="col-12 col-md-6">
       <div class="canvas">
-        <img *ngIf="score>=-4 && score <=-2" src="../../assets/images/happy face.svg" alt="Happy Face">
-        <img *ngIf="score>=-1&&score<=2" src="../../assets/images/serious face.svg" alt="Serious Face">
-        <img *ngIf="score>=3&&score<=6" src="../../assets/images/sad face.svg" alt="Sad Face">
+        <img *ngIf="score < 0" src="../../assets/images/happy face.svg" alt="Happy Face">
+        <img *ngIf="score == 0" src="../../assets/images/serious face.svg" alt="Serious Face">
+        <img *ngIf="score > 0" src="../../assets/images/sad face.svg" alt="Sad Face">
 
         <!-- <div class="happyface" [hidden]="isSadFace">
           <div class="eyes">
