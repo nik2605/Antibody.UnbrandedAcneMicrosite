@@ -77,21 +77,40 @@ export class PersonalizedguideComponent implements OnInit {
 
       if (result["message"] === '200 OK') {
 
+      //   this.pdfName = result["filename"];
+      //   if (this.pdfName.length > 0) {
+
+      //     var pdfUrl = this.containerUrl + this.pdfName;
+
+      //     window.location.replace(pdfUrl);
+      //   }
+
+
+
         this.pdfName = result["filename"];
         if (this.pdfName.length > 0) {
 
           var pdfUrl = this.containerUrl + this.pdfName;
 
-          this._httpClient.get(pdfUrl, {
-            observe: 'response',
-            responseType: 'blob'
-          }).subscribe(res => {
-            this._FileSaverService.save(res.body, this.pdfName);
-          });
+
+
+          if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+            window.location.replace(pdfUrl);
+            // window.open(pdfUrl, "_blank");
+          }
+          else {
+            this._httpClient.get(pdfUrl, {
+              observe: 'response',
+              responseType: 'blob'
+            }).subscribe(res => {
+              this._FileSaverService.save(res.body, this.pdfName);
+            });
+          }
+
+
           return;
         }
-
-        //window.location.replace(pdfUrl);
 
       }
       else {
