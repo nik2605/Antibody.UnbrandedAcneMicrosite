@@ -37,6 +37,19 @@ namespace Antibody.UnbrandedAcneMicrosite
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
+                context.Response.Headers.Add("Referrer-Policy", "no-referrer");
+                context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+                //context.Response.Headers.Add("Content-Security-Policy",
+                //"default-src 'self' style-src 'self' 'unsafe-inline';");
+
+                await next();
+            });
+
+
             //app.UseCors("MyPolicy");
             if (env.IsDevelopment())
             {
