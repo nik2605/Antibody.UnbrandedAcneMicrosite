@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   download_path:"https://acnemicrosite.blob.core.windows.net/exportpdfs/",
-  googleAnalyticsTrackingID: 'G-NS6S2FY8WQ'
+  googleAnalyticsTrackingID: 'GTM-M5G8S69'
 };
 
 /*
