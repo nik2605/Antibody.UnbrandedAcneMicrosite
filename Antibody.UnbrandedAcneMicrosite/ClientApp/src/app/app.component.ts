@@ -1,7 +1,9 @@
 
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { Router, Event, Scroll } from '@angular/router';
+import { Router, Event, Scroll, NavigationEnd } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
+import { environment } from 'src/environments/environment';
+declare let gtag: Function;
 
 const isInViewport = (elem) => {
   const bounding = elem.getBoundingClientRect();
@@ -26,7 +28,18 @@ export class AppComponent {
   constructor(
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: any
-  ) { }
+  ) {
+
+    this.router.events.subscribe(event => {
+      if(event instanceof NavigationEnd){
+        gtag('config', environment.googleAnalyticsTrackingID, {
+          'page_title' : event.urlAfterRedirects,
+          'page_path': event.urlAfterRedirects
+          });
+          }
+        });
+
+   }
 
   ngOnInit() {
 
