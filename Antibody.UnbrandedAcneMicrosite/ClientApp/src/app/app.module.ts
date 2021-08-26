@@ -19,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LandingComponent } from './landing/landing.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FileSaverModule } from 'ngx-filesaver';
+import { CookiepolicyComponent } from './cookiepolicy/cookiepolicy.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -37,7 +38,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     PageNotFoundComponent,
     HeaderComponent,
     FooterComponent,
-    LandingComponent
+    LandingComponent,
+    CookiepolicyComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

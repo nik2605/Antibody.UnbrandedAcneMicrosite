@@ -15,14 +15,15 @@ import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component'
 import { WhatcanidoComponent } from './whatcanido/whatcanido.component';
 import { WhatisacneComponent } from './whatisacne/whatisacne.component';
 import { CommonModule, Location } from '@angular/common';
+import { CookiepolicyComponent } from './cookiepolicy/cookiepolicy.component';
 
 export function HttpLoaderFactory(translate: TranslateService, location: Location, settings: LocalizeRouterSettings, http: HttpClient) {
   return new LocalizeRouterHttpLoader(translate, location, settings, http);
 }
 
 const routerOptions: ExtraOptions = {
-  onSameUrlNavigation:"reload",
-  enableTracing:true,
+  onSameUrlNavigation: "reload",
+  enableTracing: true,
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
   //scrollOffset: [0, 90],
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'personalizedguide', component: PersonalizedguideComponent },
   { path: 'privacypolicy', component: PrivacypolicyComponent },
+  { path: 'cookiepolicy', component: CookiepolicyComponent },
   // { path: 'whatcanido', component: WhatcanidoComponent },
   // { path: 'whatisacne', component: WhatisacneComponent },
   // { path: 'acnemisconceptions', component: AcnemisconceptionsComponent },

@@ -12,6 +12,7 @@
   "FOOTER":{
     "copyright":"&copy;&nbsp;2021 commandité par Galderma. Tous droits réservés.",
     "privacy_policy":"Politique de confidentialité",
+    "cookie_poliocy":"Politique sur les témoins",
     "product_code":"CA-AFC-2100062"
   },
   "HOME":{
@@ -170,5 +171,18 @@
     "you_are_entitled_at_any":"Vous avez le droit d’accéder à tout moment à vos données personnelles en notre possession. Dans la mesure où la loi le permet, vous pouvez demander que vos données soient supprimées, que des erreurs soient corrigées ou que le traitement de vos données personnelles soit limité. Vous pouvez également vous opposer au traitement de vos données personnelles.<br><br>Si vous souhaitez exercer vos droits, veuillez communiquer avec nous comme il est décrit dans la section « Nous joindre » dans la « Politique de confidentialité ». Veuillez noter que les lois applicables peuvent nous empêcher de répondre aux demandes de suppression de renseignements liés à la sécurité ou de restreindre notre traitement de ces renseignements. <br><br>Vous avez le droit de déposer une réclamation auprès de l’autorité réglementaire.",
     "subhead_8":"Nous joindre",
     "please_contact_us":"Veuillez communiquer avec nous si vous avez des questions sur cette politique de confidentialité ou si vous souhaitez exercer vos droits en matière de confidentialité de vos données personnelles.<br>Galderma Canada Inc., 55 Commerce Valley Drive W, Suite 400, Thornhill (Ontario)&nbsp;&nbsp;L3T 7V9<br>Numéro de téléphone : +1 905 762-2500 ou 1 800 467-2081 (il s’agit du numéro pour joindre le « contrôleur » des données personnelles)"
+  },
+  "COOKIEPOLICY":{
+    "headline":"Politique sur les témoins",
+    "subhead_1":"Témoins :",
+    "subhead_1_copy":"Nous utilisons Google Analytics pour faire le suivi de l’utilisation du site Web à l’aide de leurs témoins.<br><br>Google Analytics définit des témoins propriétaires au moyen d’un élément de code JavaScript qui est ajouté à chaque page pour laquelle nous devons faire un suivi. Google Analytics définit automatiquement quatre témoins, qui sont les seuls témoins déployés, et un cinquième nécessitant un consentement (cela concerne le partage de renseignements sur le trafic généré par Google).<br><br>Comme cette campagne se déroule à la fois à l’échelle mondiale et au sein de l’Union européenne, nous utilisons les témoins suivants :",
+    "subhead_2":"Témoin __utma",
+    "subhead_2_copy":"Un témoin persistant reste sur un ordinateur sauf s’il expire ou que la mémoire cache des témoins est vidée. Il permet de surveiller les visiteurs. Les paramètres associés au témoin Google __utma comprennent les suivants : première visite (visite unique), dernière visite (visite de retour).",
+    "subhead_3":"Témoin __utmb et témoin __utmc",
+    "subhead_3_copy":"Ces témoins fonctionnent en tandem pour calculer la durée de la visite. Le témoin Google __utmb marque l’heure d’arrivée exacte, puis le témoin Google __utmc enregistre l’heure précise où l’utilisateur quitte la page.<br><br>Étant donné que le témoin __utmb compte les visites d’entrée, il s’agit d’un témoin de session qui expire à la fin de la session, par exemple lorsque l’utilisateur quitte la page. Un horodatage de 30 minutes doit s’écouler avant l’expiration du témoin Google __utmc. Un témoin __utmc donné ne peut pas dire si une session de navigateur ou de site Web se termine. Par conséquent, si aucune nouvelle page vue n’est enregistrée dans les 30 minutes, le témoin expire. <br><br>Il s’agit d’une « période de grâce » standard dans l’analyse Web. Les entreprises Omniture et WebTrends, parmi tant d’autres, suivent la même procédure.",
+    "subhead_4":"Témoin __utmz",
+    "subhead_4_copy":"Le témoin __utmz surveille le référent HTTP et note d’où un visiteur est arrivé, classant le référent par type (moteur de recherche [référencement organique ou publicité coût par clic], direct, social et non comptabilisé). À partir du référent HTTP, le témoin _utmz enregistre également le mot-clé qui a généré la visite ainsi que les données de géolocalisation.<br><br>Ce témoin dure six mois. En termes de suivi, ce témoin est peut-être le plus important, car il nous renseigne sur le trafic et nous aide relativement aux renseignements de conversion tels que la source / le support / le mot-clé à attribuer pour une conversion d’objectif (dans le cas présent, un téléchargement de rendez-vous).",
+    "subhead_5":"Témoin __utmv",
+    "subhead_5_copy":"Le témoin Google __utmv dure « pour toujours ». Il s’agit d’un témoin persistant. Il est utilisé pour la segmentation et l’expérimentation des données. De plus, le témoin __utmv fonctionne de concert avec le témoin __utmz pour améliorer les capacités de ciblage des témoins."
   }
 }

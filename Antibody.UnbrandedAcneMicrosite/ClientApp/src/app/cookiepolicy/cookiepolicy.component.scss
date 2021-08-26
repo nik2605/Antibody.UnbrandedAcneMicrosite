@@ -1,0 +1,11 @@
+@import "../../styles/style.scss";
+
+.main{
+  h2{
+    font-size:$p_font_size;
+    margin-top: 30px;
+  }
+  p{
+    font-size: $policy_p_font_size;
+  }
+}
