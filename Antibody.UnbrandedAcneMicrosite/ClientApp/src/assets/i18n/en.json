@@ -172,17 +172,17 @@
     "subhead_8":"How to contact us",
     "please_contact_us":"Please contact us if you have any questions about this privacy policy or if you wish to exercise your privacy rights to your personal data.<br>Galderma Canada Inc., 55 Commerce Valley Drive W, Suite 400, Thornhill, Ontario&nbsp;&nbsp;L3T 7V9<br>Phone number: +1 905-762-2500 or 1-800-467-2081 (This is the \"Controller\" of the personal data.)"
   },
-  "COOKIEPOLICY":{
-    "headline":"Cookie policy",
-    "subhead_1":"Cookies:",
-    "subhead_1_copy":"We use Google Analytics to track the use of the website using their cookies.<p class=\"mb-3\"></p>Google Analytics sets first-party cookies via a piece of JavaScript code, which is added to every page that we need to track. Google Analytics sets four cookies automatically, which are the only cookies deployed, and a fifth via opt-in (this one relates to sharing information about the traffic generated with Google).<p class=\"mb-3\"></p>As this campaign runs both globally and within the European Union, we have adopted using the following cookies:",
-    "subhead_2":"__utma cookie",
-    "subhead_2_copy":"A persistent cookie &#8212; remains on a computer unless it expires or the cookie cache is cleared. It tracks visitors. Metrics associated with the Google __utma cookie include first visit (unique visit), last visit (returning visit).",
-    "subhead_3":"__utmb cookie & __utmc cookie",
-    "subhead_3_copy":"These cookies work in tandem to calculate visit length. Google __utmb cookie demarks the exact arrival time, then Google __utmc registers the precise exit time of the user.<p class=\"mb-3\"></p>Because __utmb counts entrance visits, it is a session cookie and expires at the end of the session, e.g., when the user leaves the page. A timestamp of 30 minutes must pass before Google cookie __utmc expires. Given__utmc cannot tell if a browser or website session ends. Therefore, if no new page view is recorded in 30 minutes the cookie is expired.<p class=\"mb-3\"></p>This is a standard \"grace period\" in web analytics. Ominture and WebTrends, among many others, follow the same procedure.",
-    "subhead_4":"__utmz cookie",
-    "subhead_4_copy":"Cookie __utmz monitors the HTTP Referrer and notes where a visitor arrived from, with the referrer siloed into type (Search engine (organic or cpc), direct, social and unaccounted). From the HTTP Referrer, the _utmz cookie also registers what keyword generated the visit, plus geolocation data.<p class=\"mb-3\"></p>This cookie lasts six months. In tracking terms, this cookie is perhaps the most important as it will tell us about traffic and helps with conversion information, such as what source / medium / keyword to attribute for a Goal Conversion (in this case an appointment download).",
-    "subhead_5":"__utmv cookie",
-    "subhead_5_copy":"Google __utmv cookie lasts \"forever.\" It is a persistent cookie. It is used for segmentation, data experimentation and the __utmv works hand in hand with the   __utmz cookie to improve cookie-targeting capabilities."
+  "COOKIEPOLICY": {
+    "headline": "Cookie policy",
+    "subhead_1": "Cookies:",
+    "subhead_1_copy": "We use Google Analytics to track the use of the website using their cookies.<br><br>Google Analytics sets first-party cookies via a piece of JavaScript code, which is added to every page that we need to track. Google Analytics sets four cookies automatically, which are the only cookies deployed, and a fifth via opt-in (this one relates to sharing information about the traffic generated with Google).<br><br>As this campaign runs both globally and within the European Union, we have adopted using the following cookies:",
+    "subhead_2": "__utma cookie",
+    "subhead_2_copy": "A persistent cookie &#8212; remains on a computer unless it expires or the cookie cache is cleared. It tracks visitors. Metrics associated with the Google __utma cookie include first visit (unique visit), last visit (returning visit).",
+    "subhead_3": "__utmb cookie & __utmc cookie",
+    "subhead_3_copy": "These cookies work in tandem to calculate visit length. Google __utmb cookie demarks the exact arrival time, then Google __utmc registers the precise exit time of the user.<br><br>Because __utmb counts entrance visits, it is a session cookie and expires at the end of the session, e.g., when the user leaves the page. A timestamp of 30 minutes must pass before Google cookie __utmc expires. Given__utmc cannot tell if a browser or website session ends. Therefore, if no new page view is recorded in 30 minutes the cookie is expired.<br><br>This is a standard \"grace period\" in web analytics. Ominture and WebTrends, among many others, follow the same procedure.",
+    "subhead_4": "__utmz cookie",
+    "subhead_4_copy": "Cookie __utmz monitors the HTTP Referrer and notes where a visitor arrived from, with the referrer siloed into type (Search engine (organic or cpc), direct, social and unaccounted). From the HTTP Referrer, the _utmz cookie also registers what keyword generated the visit, plus geolocation data.<br><br>This cookie lasts six months. In tracking terms, this cookie is perhaps the most important as it will tell us about traffic and helps with conversion information, such as what source / medium / keyword to attribute for a Goal Conversion (in this case an appointment download).",
+    "subhead_5": "__utmv cookie",
+    "subhead_5_copy": "Google __utmv cookie lasts \"forever.\" It is a persistent cookie. It is used for segmentation, data experimentation and the __utmv works hand in hand with the   __utmz cookie to improve cookie-targeting capabilities."
   }
 }
