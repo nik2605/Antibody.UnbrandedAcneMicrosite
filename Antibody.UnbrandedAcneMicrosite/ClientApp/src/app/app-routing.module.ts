@@ -16,6 +16,7 @@ import { WhatcanidoComponent } from './whatcanido/whatcanido.component';
 import { WhatisacneComponent } from './whatisacne/whatisacne.component';
 import { CommonModule, Location } from '@angular/common';
 import { CookiepolicyComponent } from './cookiepolicy/cookiepolicy.component';
+import { EventrecordingComponent } from './eventrecording/eventrecording.component';
 
 export function HttpLoaderFactory(translate: TranslateService, location: Location, settings: LocalizeRouterSettings, http: HttpClient) {
   return new LocalizeRouterHttpLoader(translate, location, settings, http);
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: 'personalizedguide', component: PersonalizedguideComponent },
   { path: 'privacypolicy', component: PrivacypolicyComponent },
   { path: 'cookiepolicy', component: CookiepolicyComponent },
+  { path: 'eventrecording', component: EventrecordingComponent },
   // { path: 'whatcanido', component: WhatcanidoComponent },
   // { path: 'whatisacne', component: WhatisacneComponent },
   // { path: 'acnemisconceptions', component: AcnemisconceptionsComponent },

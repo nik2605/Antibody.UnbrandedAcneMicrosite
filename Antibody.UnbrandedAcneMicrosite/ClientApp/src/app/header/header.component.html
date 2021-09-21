@@ -54,7 +54,7 @@
         </div>
       </div>
       <div class="col-2 col-lg-1 d-flex justify-content-center align-items-center">
-        <div id="language_icon" (click)="switchLanguage(language_icon_text)">
+        <div id="language_icon" (click)="switchLanguage(language_icon_text)" [hidden]="isTranslateShow">
           {{ language_icon_text | uppercase}}
         </div>
       </div>

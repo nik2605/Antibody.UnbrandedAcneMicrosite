@@ -20,6 +20,7 @@ import { LandingComponent } from './landing/landing.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FileSaverModule } from 'ngx-filesaver';
 import { CookiepolicyComponent } from './cookiepolicy/cookiepolicy.component';
+import { EventrecordingComponent } from './eventrecording/eventrecording.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -39,7 +40,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     HeaderComponent,
     FooterComponent,
     LandingComponent,
-    CookiepolicyComponent
+    CookiepolicyComponent,
+    EventrecordingComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

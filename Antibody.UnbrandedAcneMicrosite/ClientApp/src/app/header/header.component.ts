@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd, Event, NavigationStart, NavigationError } from '@angular/router';
 import { LocalizeRouterService } from '@gilsdav/ngx-translate-router';
-import {TranslateService} from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -12,11 +12,13 @@ import {TranslateService} from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
 
   public language_icon_text: string;
-  public currentLanguage:string;
+  public currentLanguage: string;
   isHide = false;
   isMobileMenu = false;
 
-  constructor(public translate: TranslateService,public localize: LocalizeRouterService,private router:Router){
+  isTranslateShow = false;
+
+  constructor(public translate: TranslateService, public localize: LocalizeRouterService, private router: Router) {
     //console.log('ROUTES', this.localize.parser.currentLang);
     //translate.addLangs(['en', 'fr']);
     // translate.setDefaultLang('en');
@@ -27,20 +29,46 @@ export class HeaderComponent implements OnInit {
     translate.use(this.currentLanguage);
 
 
-    this.language_icon_text = this.currentLanguage == "en"?"fr":"en";
+    this.language_icon_text = this.currentLanguage == "en" ? "fr" : "en";
+
+
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationStart) {
+        // Show loading indicator
+      }
+
+      if (event instanceof NavigationEnd) {
+        if (window.location.pathname.toUpperCase().includes("EVENTRECORDING")) {
+          router.navigate(["/en/eventrecording"]);
+          this.currentLanguage = 'en';
+          this.isTranslateShow = true;
+        }
+        else {
+          this.isTranslateShow = false;
+        }
+        // Hide loading indicator
+      }
+
+      if (event instanceof NavigationError) {
+        // Hide loading indicator
+
+        // Present error to user
+        //console.log(event.error);
+      }
+    });
   }
 
   ngOnInit(): void {
   }
 
 
-  switchLanguage(targetLanguage:string){
+  switchLanguage(targetLanguage: string) {
     this.currentLanguage = targetLanguage;
     //let translatedURL = this.router.url.replace(this.translate.currentLang,targetLanguage);
     //location.replace('/'+ this.currentLanguage+'/home');
     //this.router.navigate('home');
     this.translate.use(targetLanguage);
-    this.language_icon_text = targetLanguage == "en"?"fr":"en";
+    this.language_icon_text = targetLanguage == "en" ? "fr" : "en";
 
   }
 
