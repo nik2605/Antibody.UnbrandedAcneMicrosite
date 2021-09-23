@@ -23,6 +23,7 @@ namespace Antibody.UnbrandedAcneMicrosite.Controllers
         {
             Configuration = configuration;
         }
+        [HttpPost]
         public async Task<IActionResult> Index(formViewModel formviewmodel)
         {
             string bit_key = Configuration.GetValue<string>("BitMiracle_key");
