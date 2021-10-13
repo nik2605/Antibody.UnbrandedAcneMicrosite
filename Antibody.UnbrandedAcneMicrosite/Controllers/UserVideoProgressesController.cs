@@ -13,25 +13,25 @@ namespace Antibody.UnbrandedAcneMicrosite.Controllers
     [ApiController]
     public class UserVideoProgressesController : ControllerBase
     {
-        private readonly DB_Antibody_UnbrandedContext _context;
+        private readonly db_antibody_unbrandedContext _context;
 
-        public UserVideoProgressesController(DB_Antibody_UnbrandedContext context)
+        public UserVideoProgressesController(db_antibody_unbrandedContext context)
         {
             _context = context;
         }
 
         // GET: api/UserVideoProgresses
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<UserVideoProgress>>> GetUserVideoProgresses()
+        public async Task<ActionResult<IEnumerable<Uservideoprogress>>> GetUserVideoProgresses()
         {
-            return await _context.UserVideoProgresses.ToListAsync();
+            return await _context.Uservideoprogresses.ToListAsync();
         }
 
         // GET: api/UserVideoProgresses/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserVideoProgress>> GetUserVideoProgress(int id)
+        public async Task<ActionResult<Uservideoprogress>> GetUserVideoProgress(int id)
         {
-            var userVideoProgress = await _context.UserVideoProgresses.FindAsync(id);
+            var userVideoProgress = await _context.Uservideoprogresses.FindAsync(id);
 
             if (userVideoProgress == null)
             {
@@ -44,7 +44,7 @@ namespace Antibody.UnbrandedAcneMicrosite.Controllers
         // PUT: api/UserVideoProgresses/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUserVideoProgress(int id, UserVideoProgress userVideoProgress)
+        public async Task<IActionResult> PutUserVideoProgress(int id, Uservideoprogress userVideoProgress)
         {
             if (id != userVideoProgress.VideoProgressId)
             {
@@ -75,7 +75,7 @@ namespace Antibody.UnbrandedAcneMicrosite.Controllers
         // POST: api/UserVideoProgresses
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<UserVideoProgress>> PostUserVideoProgress(string UserId,int progressTime,int videoId)
+        public async Task<ActionResult<Uservideoprogress>> PostUserVideoProgress(string UserId,int progressTime,int videoId)
         {
             if (progressTime <= 0)
             {
@@ -89,21 +89,21 @@ namespace Antibody.UnbrandedAcneMicrosite.Controllers
                     return BadRequest("User not found");
                 }
 
-                UserVideoProgress userVideoProgress = new UserVideoProgress()
+                Uservideoprogress userVideoProgress = new Uservideoprogress()
                 {
-                    UserGuid = Guid.Parse(UserId),
+                    UserGuid = UserId,
                     ProgressSecond = progressTime,
                     DateUpdated = DateTime.Now,
                     VideoId = videoId,
                 };
 
 
-                var progress = _context.UserVideoProgresses.FirstOrDefault(x => x.UserGuid == userVideoProgress.UserGuid && x.VideoId == userVideoProgress.VideoId);
+                var progress = _context.Uservideoprogresses.FirstOrDefault(x => x.UserGuid == userVideoProgress.UserGuid && x.VideoId == userVideoProgress.VideoId);
 
                 if (progress == null)
                 {
                     //insert new progress
-                    _context.UserVideoProgresses.Add(userVideoProgress);
+                    _context.Uservideoprogresses.Add(userVideoProgress);
                 }
                 else
                 {
@@ -129,13 +129,13 @@ namespace Antibody.UnbrandedAcneMicrosite.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUserVideoProgress(int id)
         {
-            var userVideoProgress = await _context.UserVideoProgresses.FindAsync(id);
+            var userVideoProgress = await _context.Uservideoprogresses.FindAsync(id);
             if (userVideoProgress == null)
             {
                 return NotFound();
             }
 
-            _context.UserVideoProgresses.Remove(userVideoProgress);
+            _context.Uservideoprogresses.Remove(userVideoProgress);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -143,7 +143,7 @@ namespace Antibody.UnbrandedAcneMicrosite.Controllers
 
         private bool UserVideoProgressExists(int id)
         {
-            return _context.UserVideoProgresses.Any(e => e.VideoProgressId == id);
+            return _context.Uservideoprogresses.Any(e => e.VideoProgressId == id);
         }
     }
 }

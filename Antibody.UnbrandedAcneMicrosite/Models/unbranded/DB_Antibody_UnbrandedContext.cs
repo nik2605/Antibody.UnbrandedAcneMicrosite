@@ -6,34 +6,65 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Antibody.UnbrandedAcneMicrosite.Models.unbranded
 {
-    public partial class DB_Antibody_UnbrandedContext : DbContext
+    public partial class db_antibody_unbrandedContext : DbContext
     {
-        public DB_Antibody_UnbrandedContext()
-        {
-        }
-
-        public DB_Antibody_UnbrandedContext(DbContextOptions<DB_Antibody_UnbrandedContext> options)
+        public db_antibody_unbrandedContext(DbContextOptions<db_antibody_unbrandedContext> options)
             : base(options)
         {
         }
 
-        public virtual DbSet<UserVideoProgress> UserVideoProgresses { get; set; }
+        public virtual DbSet<Efmigrationshistory> Efmigrationshistories { get; set; }
+        public virtual DbSet<Uservideoprogress> Uservideoprogresses { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseMySQL("server=localhost; port=3306; database=db_antibody_unbranded; user=root; password=; Persist Security Info=False; Connect Timeout=300; SslMode=none;");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
-
-            modelBuilder.Entity<UserVideoProgress>(entity =>
+            modelBuilder.Entity<Efmigrationshistory>(entity =>
             {
-                entity.HasKey(e => e.VideoProgressId);
+                entity.HasKey(e => e.MigrationId)
+                    .HasName("PRIMARY");
 
-                entity.ToTable("UserVideoProgress");
+                entity.ToTable("__efmigrationshistory");
 
-                entity.Property(e => e.DateUpdated).HasColumnType("datetime");
+                entity.Property(e => e.MigrationId).HasMaxLength(150);
 
-                entity.Property(e => e.Misc).IsUnicode(false);
+                entity.Property(e => e.ProductVersion)
+                    .IsRequired()
+                    .HasMaxLength(32);
+            });
 
-                entity.Property(e => e.ProgressSecond).HasColumnType("decimal(18, 0)");
+            modelBuilder.Entity<Uservideoprogress>(entity =>
+            {
+                entity.HasKey(e => e.VideoProgressId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("uservideoprogress");
+
+                entity.Property(e => e.VideoProgressId).HasColumnType("int(11)");
+
+                entity.Property(e => e.DateUpdated).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.Misc)
+                    .HasColumnType("mediumtext")
+                    .HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.ProgressSecond).HasColumnType("decimal(10,2)");
+
+                entity.Property(e => e.UserGuid)
+                    .IsRequired()
+                    .HasMaxLength(64);
+
+                entity.Property(e => e.VideoId)
+                    .HasColumnType("int(11)")
+                    .HasDefaultValueSql("'NULL'");
             });
 
             OnModelCreatingPartial(modelBuilder);

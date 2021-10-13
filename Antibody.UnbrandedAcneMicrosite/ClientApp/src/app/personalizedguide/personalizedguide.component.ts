@@ -72,50 +72,52 @@ export class PersonalizedguideComponent implements OnInit {
       txt_6_1: f.value.txt_6_1
     }
 
-    this.exportPDFService.sendData(this.formviewmodel).subscribe(result => {
+    this.exportPDFService.sendData(this.formviewmodel).subscribe((result:any) => {
       // console.log(result);
+      if(result!= null){
+        this._FileSaverService.save(result.document, result.fileName);
+      }
+      // if (result["message"] === '200 OK') {
 
-      if (result["message"] === '200 OK') {
+      // //   this.pdfName = result["filename"];
+      // //   if (this.pdfName.length > 0) {
+
+      // //     var pdfUrl = this.containerUrl + this.pdfName;
+
+      // //     window.location.replace(pdfUrl);
+      // //   }
+
+
 
       //   this.pdfName = result["filename"];
       //   if (this.pdfName.length > 0) {
 
       //     var pdfUrl = this.containerUrl + this.pdfName;
 
-      //     window.location.replace(pdfUrl);
+
+
+      //     if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+      //       window.location.replace(pdfUrl);
+      //       // window.open(pdfUrl, "_blank");
+      //     }
+      //     else {
+      //       this._httpClient.get(pdfUrl, {
+      //         observe: 'response',
+      //         responseType: 'blob'
+      //       }).subscribe(res => {
+      //         this._FileSaverService.save(res.body, this.pdfName);
+      //       });
+      //     }
+
+
+      //     return;
       //   }
 
-
-
-        this.pdfName = result["filename"];
-        if (this.pdfName.length > 0) {
-
-          var pdfUrl = this.containerUrl + this.pdfName;
-
-
-
-          if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-
-            window.location.replace(pdfUrl);
-            // window.open(pdfUrl, "_blank");
-          }
-          else {
-            this._httpClient.get(pdfUrl, {
-              observe: 'response',
-              responseType: 'blob'
-            }).subscribe(res => {
-              this._FileSaverService.save(res.body, this.pdfName);
-            });
-          }
-
-
-          return;
-        }
-
-      }
-      else {
-        console.log(result);
-      }
+      // }
+      // else {
+      //   console.log(result);
+      // }
     })
   }
 }

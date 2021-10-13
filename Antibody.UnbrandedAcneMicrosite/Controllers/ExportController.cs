@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using System.IO;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
+using System.Net.Http.Headers;
 
 namespace Antibody.UnbrandedAcneMicrosite.Controllers
 {
@@ -28,15 +29,15 @@ namespace Antibody.UnbrandedAcneMicrosite.Controllers
         {
             string bit_key = Configuration.GetValue<string>("BitMiracle_key");
             string bit_name = Configuration.GetValue<string>("BitMiracle_name");
-            string azure_key = Configuration.GetValue<string>("Azure_storage_key");
-            string container_name = Configuration.GetValue<string>("container_name");
+            //string azure_key = Configuration.GetValue<string>("Azure_storage_key");
+            //string container_name = Configuration.GetValue<string>("container_name");
 
             BitMiracle.Docotic.LicenseManager.AddLicenseData(bit_key, bit_name);
 
 
             string filename = Guid.NewGuid() + ".pdf";
-            string localpath = "";
-            string localFilePath = Path.Combine(localpath, filename);
+            //string localpath = "";
+            //string localFilePath = Path.Combine(localpath, filename);
 
             try
             {
@@ -172,33 +173,41 @@ namespace Antibody.UnbrandedAcneMicrosite.Controllers
 
                         }
                     }
-                    pdf.Save(localFilePath);
-                    //string connectionString = Environment.GetEnvironmentVariable("AZURE_STORAGE_CONNECTION_STRING");
-                    string connectionString = azure_key;
-                    BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
+                    // pdf.Save(localFilePath);
+                    // //string connectionString = Environment.GetEnvironmentVariable("AZURE_STORAGE_CONNECTION_STRING");
+                    // string connectionString = azure_key;
+                    // BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
 
-                    //var azureAccount = CloudStorageAccount.Parse(azure_key);
-                   //CloudBlobClient cloudblobclient = azureAccount.CreateCloudBlobClient();
+                    // //var azureAccount = CloudStorageAccount.Parse(azure_key);
+                    ////CloudBlobClient cloudblobclient = azureAccount.CreateCloudBlobClient();
 
 
-                    BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(container_name);
-                    BlobClient blobClient = containerClient.GetBlobClient(filename);
-                    await blobClient.UploadAsync(localFilePath, true).ContinueWith((t) =>
-                    {
-                        System.IO.File.Delete(filename);
-                    });
+                    // BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(container_name);
+                    // BlobClient blobClient = containerClient.GetBlobClient(filename);
+                    // await blobClient.UploadAsync(localFilePath, true).ContinueWith((t) =>
+                    // {
+                    //     System.IO.File.Delete(filename);
+                    // });
+
+                    using var stream = new MemoryStream();
+                    // Saves the document as stream
+                    pdf.Save(stream);
+
+                    // Converts the PdfDocument object to byte array.
+                    var content = stream.ToArray();
+
+                    return new ObjectResult(new { Document = content, FileName = filename});
                 }
             }
             catch (Exception e)
             {
-
                 throw;
             }
 
             //Process.Start(pathToFile);
 
-            var result = new OkObjectResult(new { message = "200 OK", filename = filename });
-            return result;
+            //var result = new OkObjectResult(new { message = "200 OK", filename = filename });
+            //return result;
         }
 
         public class formViewModel

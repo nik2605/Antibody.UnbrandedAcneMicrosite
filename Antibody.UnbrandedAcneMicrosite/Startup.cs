@@ -1,4 +1,3 @@
-using Antibody.UnbrandedAcneMicrosite.Models.unbranded;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.OpenApi.Models;
+using Antibody.UnbrandedAcneMicrosite.Models.unbranded;
 
 namespace Antibody.UnbrandedAcneMicrosite
 {
@@ -24,16 +24,22 @@ namespace Antibody.UnbrandedAcneMicrosite
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DB_Antibody_UnbrandedContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("unbranded"));
-            });
+            //services.AddDbContext<DB_Antibody_UnbrandedContext>(options =>
+            //{
+            //    options.UseSqlServer(Configuration.GetConnectionString("unbranded"));
+            //});
+
+            string mySqlConnectionStr = Configuration.GetConnectionString("unbranded");
+            services.AddDbContextPool<db_antibody_unbrandedContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
+
+
             //services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             //{
             //    builder.AllowAnyOrigin()
             //           .AllowAnyMethod()
             //           .AllowAnyHeader();
             //}));
+            services.AddControllers();
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
